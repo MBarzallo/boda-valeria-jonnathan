@@ -67,7 +67,7 @@ export default function RootLayout({
                 href="https://wa.me/593984847279"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#D4AF37] hover:underline"
+                className="text-[#a53d3b] hover:underline"
               >
                 +593 98 484 7279
               </a>
@@ -78,7 +78,7 @@ export default function RootLayout({
                 href="https://wa.me/593939799384"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#D4AF37] hover:underline"
+                className="text-[#a53d3b] hover:underline"
               >
                 +593 93 979 9384
               </a>
