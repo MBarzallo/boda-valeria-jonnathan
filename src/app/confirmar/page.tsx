@@ -66,26 +66,32 @@ export default function Confirmar() {
       <div className="grid grid-cols-8 grid-rows-6 gap-4 w-full h-[380px]">
         <img
           src="/static/risas.jpg"
+          alt="Risas"
           className="col-span-4 row-span-3 object-cover rounded-2xl shadow-sm"
         />
         <img
           src="/static/abrazito.jpg"
+          alt="Abrazito"
           className="col-span-2 row-span-3 object-cover rounded-2xl shadow-sm"
         />
         <img
           src="/static/afuera.webp"
+          alt="Fuera"
           className="col-span-2 row-span-3 object-cover rounded-2xl shadow-sm"
         />
         <img
           src="/static/montana.jpg"
+          alt="Montana"
           className="col-span-2 row-span-3 object-cover rounded-2xl shadow-sm"
         />
         <img
           src="/static/escaleras.jpg"
+          alt="Escaleras"
           className="col-span-2 row-span-3 object-cover rounded-2xl shadow-sm"
         />
         <img
           src="/static/fogata.webp"
+          alt="Fogata"
           className="col-span-4 row-span-3 object-cover rounded-2xl shadow-sm"
         />
       </div>

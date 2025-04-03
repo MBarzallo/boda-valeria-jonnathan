@@ -90,7 +90,7 @@ export default function HomePage() {
 
       <section className="py-60 bg-gray-50 px-4 " data-aos="zoom-in">
         <blockquote className="text-center italic text-7xl max-w-xl mx-auto">
-          “El amor no mira con los ojos, sino con el alma."
+        &quot;El amor no mira con los ojos, sino con el alma.&quot;
           <br />
           <span className="block mt-2 text-2xl">— William Shakespeare</span>
         </blockquote>
