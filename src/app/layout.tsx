@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { Cookie,Great_Vibes } from "next/font/google";
+import { Cookie, Great_Vibes } from "next/font/google";
 import "./globals.css";
 import NavLink from "./components/NavLink";
 import Link from "next/link";
+import MobileMenu from "./components/MobileMenu";
 
 const cookie = Cookie({
   weight: "400",
@@ -10,9 +11,9 @@ const cookie = Cookie({
   subsets: ["latin"],
 });
 const greatVibes = Great_Vibes({
-  subsets: ['latin'],
-  weight: '400',
-  variable: '--font-great-vibes',
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-great-vibes",
 });
 
 export const metadata: Metadata = {
@@ -31,25 +32,27 @@ export default function RootLayout({
         <title>J-V — Boda</title>
       </head>
       <body
-        className={`${cookie.variable} ${greatVibes.variable} bg-white text-black bg-[url(/static/reloj.jpg)] bg-no-repeat animate-[fadeIn_1s_ease-in-out_forwards]`}
+        className={`${cookie.variable} ${greatVibes.variable} bg-white text-black bg-[url(/static/reloj.jpg)] bg-no-repeat  min-h-screen animate-[fadeIn_1s_ease-in-out_forwards]`}
       >
         <header className="flex justify-between p-6 items-center text-sm uppercase text-white">
-          <Link
-          href="/" passHref
-          >
-          <div
-            
-            className="font-extralight text-4xl text-[#D4AF37] cursor-pointer" 
-            style={{ fontFamily: "var(--font-cookie)" }}
-          >
-            V&J
-          </div>
+          <Link href="/" passHref>
+            <div
+              className="font-extralight text-4xl text-[#D4AF37] cursor-pointer"
+              style={{ fontFamily: "var(--font-cookie)" }}
+            >
+              V&J
+            </div>
           </Link>
           <nav className="space-x-6 hidden md:block">
             <NavLink href="#nosotros" label="Nosotros" />
             <NavLink href="#viaje" label="Ceremonia y recepción" />
             <a href="/confirmar">Confirmar</a>
           </nav>
+
+          {/* NAV MOBILE */}
+          <div className="md:hidden">
+            <MobileMenu />
+          </div>
         </header>
         <main>{children}</main>
         <footer className="bg-white  text-gray-700 py-10 text-sm px-20">

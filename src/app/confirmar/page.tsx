@@ -62,8 +62,8 @@ export default function Confirmar() {
   };
 
   return (
-    <div className="min-h-screen px-6 md:px-20 grid grid-cols-1 md:grid-cols-2 gap-7 items-center bg-white/10 backdrop-blur-md">
-      <div className="grid grid-cols-8 grid-rows-6 gap-4 w-full h-[380px]">
+    <div className="min-h-screen px-6 md:px-20 flex flex-col-reverse md:flex-row gap-8 items-center bg-white/10 backdrop-blur-md py-10">
+      <div className="grid grid-cols-8 grid-rows-6 gap-4 w-full h-auto md:h-[450px]">
         <img
           src="/static/risas.jpg"
           alt="Risas"
