@@ -1,103 +1,100 @@
-import Image from "next/image";
+'use client';
+import { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { GoogleMapsEmbed } from "@next/third-parties/google";
 
-export default function Home() {
+export default function HomePage() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1800,
+      once: true, 
+      offset: 200, 
+
+    });
+  }, []);
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="animate-fade">
+      <section className="text-center py-60 px-4 text-white">
+        <p className="uppercase tracking-wider text-sm">Nos vamos a casar</p>
+        <h1 className="text-5xl md:text-7xl font-bold mt-4 mb-2">
+          Valeria & Jonnathan{" "}
+        </h1>
+        <p className="mt-2 text-lg">
+          Sábado, 10 de mayo de 2025
+          <br />
+          Cuenca, Ecuador
+        </p>
+      </section>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      <section
+        id="nosotros"
+        className="bg-gray-100 py-20 px-6 md:px-20 flex flex-col md:flex-row items-center justify-center gap-12"
+      >
+        <div className="md:w-1/2 text-center md:text-end " data-aos="fade-right">
+          <h2 className="text-4xl md:text-5xl font-serif mb-6 leading-tight" >
+            El inicio de este nuevo capítulo
+            <br /> juntos como esposos
+          </h2>
+          <p className="text-lg md:text-xl text-gray-700">
+            Hoy nos encontramos de nuevo, como si las estrellas y el destino
+            <br />
+            nos hubieran guiado a este momento.
+          </p>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+
+        <div className="md:w-2/5 overflow-hidden rounded-xl shadow-lg animate-[fadeIn_1.5s_ease-in-out_0.3s]">
+          <img
+            src="/static/anillo.jpg"
+            alt="Anillo"
+            className="w-full h-auto object-cover"
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        </div>
+      </section>
+
+      <section id="viaje" className="py-16 px-4 md:px-20 bg-white">
+        <div className="flex flex-col justify-center items-center text-center">
+          <h2 className="text-5xl mb-6 font-serif">Ceremonia y recepción</h2>
+
+          <div className="grid md:grid-cols-2 gap-6 items-center w-full max-w-5xl">
+            <div className="overflow-hidden rounded-lg shadow-lg" data-aos="fade-right">
+              <GoogleMapsEmbed
+                apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY!}
+                height={400}
+                width="100%"
+                mode="place"
+                q="Lago+Molino"
+              />
+            </div>
+
+            <div className="text-left" data-aos="fade-left">
+              <p className="text-3xl font-semibold mb-2">Lago Molino</p>
+              <p className="text-md text-gray-600">
+                Dirección: Carr. Panamericana km 9, Cuenca
+                <br />
+                Hora: 12h00
+                <br />
+                <a
+                  href="https://maps.app.goo.gl/ZjH9oyD39NYdVFpm8"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className=" underline mt-2 inline-block"
+                >
+                  Ver en Google Maps
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-60 bg-gray-50 px-4 " data-aos="zoom-in">
+        <blockquote className="text-center italic text-7xl max-w-xl mx-auto">
+          “El amor no mira con los ojos, sino con el alma."
+          <br />
+          <span className="block mt-2 text-2xl">— William Shakespeare</span>
+        </blockquote>
+      </section>
     </div>
   );
 }
