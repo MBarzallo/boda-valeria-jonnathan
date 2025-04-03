@@ -85,6 +85,8 @@ export default function HomePage() {
         <p className="mt-2 text-lg">
           Sábado, 10 de mayo de 2025
           <br />
+          
+
           Cuenca, Ecuador
         </p>
       </section>
@@ -98,7 +100,7 @@ export default function HomePage() {
           data-aos="fade-right"
         >
           <h2 className="text-4xl md:text-5xl font-serif mb-6 leading-tight">
-            El inicio de este nuevo capítulo
+        Con mucho amor les invitamos a celebrar el inicio de este nuevo capítulo
             <br /> juntos como esposos
           </h2>
           <p className="text-lg md:text-xl text-gray-700">
@@ -117,44 +119,50 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="viaje" className="py-16 px-4 md:px-20 bg-white">
-        <div className="flex flex-col justify-center items-center text-center">
-          <h2 className="text-5xl mb-6 font-serif">Ceremonia y recepción</h2>
+      <section id="viaje" className="py-20 px-4 md:px-20 bg-white">
+  <div className="max-w-6xl mx-auto flex flex-col justify-center items-center text-center space-y-10">
+    <h2 className="text-5xl font-serif text-gray-800">Ceremonia y recepción</h2>
 
-          <div className="grid md:grid-cols-2 gap-6 items-center w-full max-w-5xl">
-            <div
-              className="overflow-hidden rounded-lg shadow-lg"
-              data-aos="fade-right"
-            >
-              <GoogleMapsEmbed
-                apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY!}
-                height={400}
-                width="100%"
-                mode="place"
-                q="Lago+Molino"
-              />
-            </div>
+    <div className="grid md:grid-cols-2 gap-10 items-center w-full bg-gray-50 shadow-xl rounded-3xl p-6 md:p-10 transition-all">
+      {/* Mapa */}
+      <div
+        className="overflow-hidden rounded-xl shadow-md"
+        data-aos="fade-right"
+      >
+        <GoogleMapsEmbed
+          apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY!}
+          height={400}
+          width="100%"
+          mode="place"
+          q="Lago+Molino"
+        />
+      </div>
 
-            <div className="text-left" data-aos="fade-left">
-              <p className="text-3xl font-semibold mb-2">Lago Molino</p>
-              <p className="text-md text-gray-600">
-                Dirección: Carr. Panamericana km 9, Cuenca
-                <br />
-                Hora: 12h00
-                <br />
-                <a
-                  href="https://maps.app.goo.gl/ZjH9oyD39NYdVFpm8"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className=" underline mt-2 inline-block"
-                >
-                  Ver en Google Maps
-                </a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Detalles */}
+      <div className="text-left space-y-4" data-aos="fade-left">
+        <h3 className="text-4xl font-serif text-gray-800">Lago Molino</h3>
+        <p className="text-lg text-gray-700">
+          <span className="font-semibold">Dirección:</span> Carr. Panamericana km 9, Cuenca
+        </p>
+        <p className="text-lg text-gray-700">
+          <span className="font-semibold">Hora:</span> 12h00
+        </p>
+        <p className="text-md text-gray-600">
+          Te pedimos ser puntual para que no te pierdas ningún instante de este día tan especial que hemos preparado con tanto amor.
+        </p>
+        <a
+          href="https://maps.app.goo.gl/ZjH9oyD39NYdVFpm8"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block text-rose-600 hover:text-rose-800 font-semibold underline underline-offset-4 transition-all duration-200"
+        >
+          Ver en Google Maps
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       <section className="py-60 bg-gray-50 px-4 " data-aos="zoom-in">
         <blockquote className="text-center italic text-7xl max-w-xl mx-auto">
@@ -218,12 +226,12 @@ export default function HomePage() {
 
             {paso===0 ?(
               <p className="text-center bg-rose-100 text-rose-800 rounded-xl px-4 py-1  shadow-sm font-serif text-xs  leading-relaxed border border-rose-200">
-              Agradecemos que esta invitación sea considerada exclusivamente
-              para las personas mencionadas.
+              Esta confirmación es exclusivamente para las personas mencionadas en la invitación
               <br />
               Para una mejor experiencia para todos los presentes, hemos decidido celebrar este momento sin niños.
               <br />
               Deseamos que esta desición no les impida asistir a nuestra celebración.
+  
             </p>
             ):(
               <>
