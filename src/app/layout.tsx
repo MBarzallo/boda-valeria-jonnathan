@@ -46,7 +46,7 @@ export default function RootLayout({
           <nav className="space-x-6 hidden md:block">
             <NavLink href="#nosotros" label="Nosotros" />
             <NavLink href="#viaje" label="Ceremonia y recepción" />
-            <a href="/confirmar">Confirmar</a>
+            <NavLink href="#confirmacion" label="Confirmar"/>
           </nav>
 
           {/* NAV MOBILE */}
